@@ -40,7 +40,7 @@ public class FoyerServiceImpl implements IFoyerService {
     }
 
     @Override
-    public List<Foyer> getAllFoyers(List<Foyer> foyers) {
+    public List<Foyer> getAllFoyers() {
         return (List<Foyer>) foyerRepo.findAll();
     }
 }

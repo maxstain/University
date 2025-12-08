@@ -14,5 +14,5 @@ public interface IReservationService {
 
     public Reservation getReservationById(Reservation reservation);
 
-    public List<Reservation> getAllReservations(List<Reservation> reservations);
+    public List<Reservation> getAllReservations();
 }

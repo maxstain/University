@@ -14,5 +14,5 @@ public interface IFoyerService {
 
     public Foyer getFoyerById(Foyer foyer);
 
-    public List<Foyer> getAllFoyers(List<Foyer> foyers);
+    public List<Foyer> getAllFoyers();
 }

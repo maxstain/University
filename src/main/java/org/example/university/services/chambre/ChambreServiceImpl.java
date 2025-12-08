@@ -40,7 +40,7 @@ public class ChambreServiceImpl implements IChambreService {
     }
 
     @Override
-    public List<Chambre> getAllChambres(List<Chambre> chambres) {
+    public List<Chambre> getAllChambres() {
         return (List<Chambre>) chambreRepository.findAll();
     }
 }

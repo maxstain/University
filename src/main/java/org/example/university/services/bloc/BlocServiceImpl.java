@@ -40,7 +40,7 @@ public class BlocServiceImpl implements IBlocService {
     }
 
     @Override
-    public List<Bloc> getAllBlocs(List<Bloc> blocs) {
+    public List<Bloc> getAllBlocs() {
         return (List<Bloc>) blocRepository.findAll();
     }
 }

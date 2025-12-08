@@ -14,5 +14,5 @@ public interface IEtudiantService {
 
     public Etudiant getEtudiantById(Etudiant etudiant);
 
-    public List<Etudiant> getAllEtudiants(List<Etudiant> etudiants);
+    public List<Etudiant> getAllEtudiants();
 }

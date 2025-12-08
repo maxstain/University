@@ -14,5 +14,5 @@ public interface IChambreService {
 
     public Chambre getChambreById(Chambre chambre);
 
-    public List<Chambre> getAllChambres(List<Chambre> chambres);
+    public List<Chambre> getAllChambres();
 }

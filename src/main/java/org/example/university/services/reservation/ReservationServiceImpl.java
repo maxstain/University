@@ -40,7 +40,7 @@ public class ReservationServiceImpl implements IReservationService {
     }
 
     @Override
-    public List<Reservation> getAllReservations(List<Reservation> reservations) {
+    public List<Reservation> getAllReservations() {
         return (List<Reservation>) reservationRepository.findAll();
     }
 }

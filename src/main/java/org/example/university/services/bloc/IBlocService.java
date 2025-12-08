@@ -14,5 +14,5 @@ public interface IBlocService {
 
     public Bloc getBlocById(Bloc bloc);
 
-    public List<Bloc> getAllBlocs(List<Bloc> blocs);
+    public List<Bloc> getAllBlocs();
 }

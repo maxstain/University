@@ -40,7 +40,7 @@ public class EtudiantServiceImpl implements IEtudiantService {
     }
 
     @Override
-    public List<Etudiant> getAllEtudiants(List<Etudiant> etudiants) {
+    public List<Etudiant> getAllEtudiants() {
         return (List<Etudiant>) etRepo.findAll();
     }
 }
