@@ -1,0 +1,43 @@
+package org.example.university.services.foyer;
+
+import org.example.university.entities.Foyer;
+import org.example.university.repositories.FoyerRepository;
+import org.jvnet.hk2.annotations.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Service
+@Component
+public class FoyerServiceImpl implements IFoyerService {
+
+    @Autowired
+    private FoyerRepository foyerRepo;
+
+
+    @Override
+    public Foyer addFoyer(Foyer foyer) {
+        return foyerRepo.save(foyer);
+    }
+
+    @Override
+    public Foyer updateFoyer(Foyer foyer) {
+        return foyerRepo.save(foyer);
+    }
+
+    @Override
+    public void deleteFoyer(long idFoyer) {
+        foyerRepo.deleteById(idFoyer);
+    }
+
+    @Override
+    public Foyer getFoyerById(Foyer foyer) {
+        return foyerRepo.findById(foyer.getIdFoyer()).orElse(null);
+    }
+
+    @Override
+    public List<Foyer> getAllFoyers(List<Foyer> foyers) {
+        return (List<Foyer>) foyerRepo.findAll();
+    }
+}
