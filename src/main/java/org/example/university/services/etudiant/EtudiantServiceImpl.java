@@ -12,9 +12,12 @@ import java.util.List;
 @Component
 public class EtudiantServiceImpl implements IEtudiantService {
 
-    @Autowired
-    private EtudiantRepository etRepo;
+    EtudiantRepository etRepo;
 
+    @Autowired
+    public EtudiantServiceImpl(EtudiantRepository etRepo) {
+        this.etRepo = etRepo;
+    }
 
     @Override
     public Etudiant addEtudiant(Etudiant etudiant) {

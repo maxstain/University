@@ -12,9 +12,12 @@ import java.util.List;
 @Component
 public class FoyerServiceImpl implements IFoyerService {
 
-    @Autowired
-    private FoyerRepository foyerRepo;
+    FoyerRepository foyerRepo;
 
+    @Autowired
+    public FoyerServiceImpl(FoyerRepository foyerRepo) {
+        this.foyerRepo = foyerRepo;
+    }
 
     @Override
     public Foyer addFoyer(Foyer foyer) {

@@ -12,9 +12,12 @@ import java.util.List;
 @Component
 public class UniversityServiceImpl implements IUniversityService {
 
-    @Autowired
-    private UniversityRepository universityRepository;
+    UniversityRepository universityRepository;
 
+    @Autowired
+    public UniversityServiceImpl(UniversityRepository universityRepository) {
+        this.universityRepository = universityRepository;
+    }
 
     @Override
     public University addUniversity(University university) {

@@ -12,9 +12,12 @@ import java.util.List;
 @Component
 public class ChambreServiceImpl implements IChambreService {
 
-    @Autowired
-    private ChambreRepository chambreRepository;
+    ChambreRepository chambreRepository;
 
+    @Autowired
+    public ChambreServiceImpl(ChambreRepository chambreRepository) {
+        this.chambreRepository = chambreRepository;
+    }
 
     @Override
     public Chambre addChambre(Chambre chambre) {

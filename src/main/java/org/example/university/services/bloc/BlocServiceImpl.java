@@ -12,8 +12,12 @@ import java.util.List;
 @Component
 public class BlocServiceImpl implements IBlocService {
 
+    BlocRepository blocRepository;
+
     @Autowired
-    private BlocRepository blocRepository;
+    public BlocServiceImpl(BlocRepository blocRepository) {
+        this.blocRepository = blocRepository;
+    }
 
     @Override
     public Bloc addBloc(Bloc bloc) {

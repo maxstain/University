@@ -12,9 +12,12 @@ import java.util.List;
 @Component
 public class ReservationServiceImpl implements IReservationService {
 
-    @Autowired
-    private ReservationRepository reservationRepository;
+    ReservationRepository reservationRepository;
 
+    @Autowired
+    public ReservationServiceImpl(ReservationRepository reservationRepository) {
+        this.reservationRepository = reservationRepository;
+    }
 
     @Override
     public Reservation addReservation(Reservation reservation) {
