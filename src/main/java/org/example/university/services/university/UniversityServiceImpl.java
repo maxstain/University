@@ -35,8 +35,8 @@ public class UniversityServiceImpl implements IUniversityService {
     }
 
     @Override
-    public University getUniversityById(University university) {
-        return universityRepository.findById(university.getIdUniversite()).orElse(null);
+    public University getUniversityById(long idUniversity) {
+        return universityRepository.findById(idUniversity).orElse(null);
     }
 
     @Override

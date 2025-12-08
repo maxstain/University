@@ -35,8 +35,8 @@ public class BlocServiceImpl implements IBlocService {
     }
 
     @Override
-    public Bloc getBlocById(Bloc bloc) {
-        return blocRepository.findById(bloc.getIdBloc()).orElse(null);
+    public Bloc getBlocById(long idBloc) {
+        return blocRepository.findById(idBloc).orElse(null);
     }
 
     @Override

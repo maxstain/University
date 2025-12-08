@@ -12,7 +12,7 @@ public interface IUniversityService {
 
     public void deleteUniversity(long idUniversity);
 
-    public University getUniversityById(University university);
+    public University getUniversityById(long idUniversity);
 
     public List<University> getAllUniversitys(List<University> universities);
 }

@@ -12,7 +12,7 @@ public interface IBlocService {
 
     public void deleteBloc(long idBloc);
 
-    public Bloc getBlocById(Bloc bloc);
+    public Bloc getBlocById(long idBloc);
 
     public List<Bloc> getAllBlocs();
 }

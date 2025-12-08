@@ -12,7 +12,7 @@ public interface IChambreService {
 
     public void deleteChambre(long idChambre);
 
-    public Chambre getChambreById(Chambre chambre);
+    public Chambre getChambreById(long idChambre);
 
     public List<Chambre> getAllChambres();
 }

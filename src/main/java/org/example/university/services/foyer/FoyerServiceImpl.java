@@ -35,8 +35,8 @@ public class FoyerServiceImpl implements IFoyerService {
     }
 
     @Override
-    public Foyer getFoyerById(Foyer foyer) {
-        return foyerRepo.findById(foyer.getIdFoyer()).orElse(null);
+    public Foyer getFoyerById(long idFoyer) {
+        return foyerRepo.findById(idFoyer).orElse(null);
     }
 
     @Override

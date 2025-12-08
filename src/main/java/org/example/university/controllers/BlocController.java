@@ -34,4 +34,9 @@ public class BlocController {
         return blocService.getAllBlocs();
     }
 
+    @GetMapping("/blocs/{id}")
+    private Bloc getBlocById(@PathVariable long id) {
+        return blocService.getBlocById(id);
+    }
+
 }

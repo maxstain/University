@@ -12,7 +12,7 @@ public interface IReservationService {
 
     public void deleteReservation(String idReservation);
 
-    public Reservation getReservationById(Reservation reservation);
+    public Reservation getReservationById(String idReservation);
 
     public List<Reservation> getAllReservations();
 }

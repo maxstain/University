@@ -35,8 +35,8 @@ public class EtudiantServiceImpl implements IEtudiantService {
     }
 
     @Override
-    public Etudiant getEtudiantById(Etudiant etudiant) {
-        return etRepo.findById(etudiant.getIdEtudiant()).orElse(null);
+    public Etudiant getEtudiantById(long idEtudiant) {
+        return etRepo.findById(idEtudiant).orElse(null);
     }
 
     @Override

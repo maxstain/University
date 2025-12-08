@@ -12,7 +12,7 @@ public interface IFoyerService {
 
     public void deleteFoyer(long idFoyer);
 
-    public Foyer getFoyerById(Foyer foyer);
+    public Foyer getFoyerById(long idFoyer);
 
     public List<Foyer> getAllFoyers();
 }
