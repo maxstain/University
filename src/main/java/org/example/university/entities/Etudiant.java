@@ -1,9 +1,35 @@
 package org.example.university.entities;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
+import java.sql.Date;
+import java.util.List;
+
+@Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Etudiant {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    long idEtudiant;
+
+    String nomEt;
+
+    String prenomEt;
+
+    long cin;
+
+    String ecole;
+
+    Date dateNaissance;
+
+    @ManyToMany(mappedBy = "etudiants")
+    List<Reservation> reservations;
 }

@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.sql.Date;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -11,16 +14,16 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class University {
+public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idUniversite;
+    String idReservation;
 
-    String nomUniversite;
+    Date anneUniversitaire;
 
-    String adresse;
+    boolean estValide;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    Foyer foyer;
+    @ManyToMany
+    List<Etudiant> etudiants;
 }

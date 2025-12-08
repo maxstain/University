@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -11,16 +13,20 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class University {
+public class Chambre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idUniversite;
+    long idChambre;
 
-    String nomUniversite;
+    String numeroChambre;
 
-    String adresse;
+    @Enumerated(EnumType.STRING)
+    TypeChambre typeC;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    Foyer foyer;
+    @ManyToOne
+    Bloc bloc;
+
+    @OneToMany
+    List<Reservation> reservations;
 }
