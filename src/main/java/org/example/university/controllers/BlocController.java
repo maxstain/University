@@ -2,6 +2,7 @@ package org.example.university.controllers;
 
 import org.example.university.entities.Bloc;
 import org.example.university.services.bloc.IBlocService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @RequestMapping("/bloc")
 public class BlocController {
 
+    @Autowired
     IBlocService iBlocService;
 
     @PostMapping("/add")
