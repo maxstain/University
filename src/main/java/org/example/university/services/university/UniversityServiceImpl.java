@@ -40,7 +40,7 @@ public class UniversityServiceImpl implements IUniversityService {
     }
 
     @Override
-    public List<University> getAllUniversitys(List<University> universities) {
+    public List<University> getAllUniversities() {
         return (List<University>) universityRepository.findAll();
     }
 }

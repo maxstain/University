@@ -14,5 +14,5 @@ public interface IUniversityService {
 
     public University getUniversityById(long idUniversity);
 
-    public List<University> getAllUniversitys(List<University> universities);
+    public List<University> getAllUniversities();
 }
