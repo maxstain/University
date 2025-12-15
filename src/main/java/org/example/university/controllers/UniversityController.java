@@ -29,8 +29,8 @@ public class UniversityController {
         iUniversityService.deleteUniversity(id);
     }
 
-    @GetMapping("/universitys")
-    List<University> getAllUniversitys() {
+    @GetMapping("/universities")
+    List<University> getAllUniversities() {
         return iUniversityService.getAllUniversities();
     }
 
