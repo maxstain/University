@@ -15,8 +15,10 @@ public class UniversityController {
     IUniversityService iUniversityService;
 
     @PostMapping("/add")
-    void addUniversity(@RequestBody University university) {
-        iUniversityService.addUniversity(university);
+    public University addUniversity(@RequestBody University university) {
+        // Ensure id is null so GenerationType.IDENTITY will let the DB generate it
+        university.setIdUniversite(null);
+        return iUniversityService.addUniversity(university);
     }
 
     @PutMapping("/update")

@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Entity
+@Table(name = "university")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,7 +16,8 @@ public class University {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idUniversite;
+    @Column(name = "id_universite")
+    Long idUniversite;
 
     String nomUniversite;
 

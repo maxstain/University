@@ -17,11 +17,11 @@ public class Foyer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idFoyer;
+    Long idFoyer;
 
     String nomFoyer;
 
-    long capaciteFoyer;
+    Long capaciteFoyer;
 
     @OneToOne(mappedBy = "foyer")
     University universite;
