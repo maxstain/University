@@ -2,9 +2,9 @@ package org.example.university.services.chambre;
 
 import org.example.university.entities.Chambre;
 import org.example.university.repositories.ChambreRepository;
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

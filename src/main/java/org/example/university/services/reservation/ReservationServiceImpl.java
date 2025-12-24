@@ -2,9 +2,9 @@ package org.example.university.services.reservation;
 
 import org.example.university.entities.Reservation;
 import org.example.university.repositories.ReservationRepository;
-import org.jvnet.hk2.annotations.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

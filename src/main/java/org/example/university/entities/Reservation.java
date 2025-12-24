@@ -17,7 +17,6 @@ import java.util.List;
 public class Reservation {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String idReservation;
 
     Date anneUniversitaire;

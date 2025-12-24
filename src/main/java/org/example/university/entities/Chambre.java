@@ -17,7 +17,7 @@ public class Chambre {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idChambre;
+    Long idChambre;
 
     String numeroChambre;
 
