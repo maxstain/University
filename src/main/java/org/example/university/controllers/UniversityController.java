@@ -1,5 +1,6 @@
 package org.example.university.controllers;
 
+import org.example.university.entities.Foyer;
 import org.example.university.entities.University;
 import org.example.university.services.university.IUniversityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +42,8 @@ public class UniversityController {
         return iUniversityService.getUniversityById(id);
     }
 
+    @PutMapping("/assign/{idUniv}/{idFoyer}")
+    University assignFoyerToUniversity(@PathVariable Long idUniv, @PathVariable long idFoyer) {
+        return iUniversityService.addFoyerToUniversity(idUniv, idFoyer);
+    }
 }

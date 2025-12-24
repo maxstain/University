@@ -1,5 +1,6 @@
 package org.example.university.services.university;
 
+import org.example.university.entities.Foyer;
 import org.example.university.entities.University;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface IUniversityService {
     public University getUniversityById(long idUniversity);
 
     public List<University> getAllUniversities();
+
+    public University addFoyerToUniversity(long idUniversity, long idFoyer);
 }

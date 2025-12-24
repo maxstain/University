@@ -1,6 +1,8 @@
 package org.example.university.services.university;
 
+import org.example.university.entities.Foyer;
 import org.example.university.entities.University;
+import org.example.university.repositories.FoyerRepository;
 import org.example.university.repositories.UniversityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -13,6 +15,7 @@ import java.util.List;
 public class UniversityServiceImpl implements IUniversityService {
 
     UniversityRepository universityRepository;
+    FoyerRepository foyerRepository;
 
     @Autowired
     public UniversityServiceImpl(UniversityRepository universityRepository) {
@@ -42,5 +45,20 @@ public class UniversityServiceImpl implements IUniversityService {
     @Override
     public List<University> getAllUniversities() {
         return (List<University>) universityRepository.findAll();
+    }
+
+    @Override
+    public University addFoyerToUniversity(long idUniversity, long idFoyer) {
+        University university = universityRepository.findById(idUniversity).orElse(null);
+        if (university != null) {
+            Foyer foyer = foyerRepository.findById(idFoyer).orElse(null);
+            if (foyer != null) {
+                university.setFoyer(foyer);
+                return universityRepository.save(university);
+            } else {
+                return null;
+            }
+        }
+        return null;
     }
 }
