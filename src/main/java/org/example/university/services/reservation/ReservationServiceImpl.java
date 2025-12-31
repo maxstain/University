@@ -43,4 +43,9 @@ public class ReservationServiceImpl implements IReservationService {
     public List<Reservation> getAllReservations() {
         return (List<Reservation>) reservationRepository.findAll();
     }
+
+    @Override
+    public Reservation ajouterReservationAvecEtudiants(Reservation reservation) {
+        return reservationRepository.save(reservation);
+    }
 }

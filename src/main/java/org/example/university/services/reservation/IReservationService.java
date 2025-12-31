@@ -15,4 +15,6 @@ public interface IReservationService {
     public Reservation getReservationById(String idReservation);
 
     public List<Reservation> getAllReservations();
+
+    public Reservation ajouterReservationAvecEtudiants (Reservation reservation);
 }

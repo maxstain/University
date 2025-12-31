@@ -15,4 +15,8 @@ public interface IFoyerService {
     public Foyer getFoyerById(long idFoyer);
 
     public List<Foyer> getAllFoyers();
+
+    public Foyer desaffecterBlocDuFoyer(long idBloc) ;
+
+    List<Foyer> getFoyers (List<Long> numeros);
 }

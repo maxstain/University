@@ -18,8 +18,9 @@ public class UniversityServiceImpl implements IUniversityService {
     FoyerRepository foyerRepository;
 
     @Autowired
-    public UniversityServiceImpl(UniversityRepository universityRepository) {
+    public UniversityServiceImpl(UniversityRepository universityRepository, FoyerRepository foyerRepository) {
         this.universityRepository = universityRepository;
+        this.foyerRepository = foyerRepository;
     }
 
     @Override
@@ -60,5 +61,23 @@ public class UniversityServiceImpl implements IUniversityService {
             }
         }
         return null;
+    }
+
+    @Override
+    public University affecterFoyerAUniversite(Long idFoyer, String nomUniversite) {
+        University university = universityRepository.findByNomUniversite(nomUniversite);
+        if (university != null) {
+            Foyer foyer = foyerRepository.findById(idFoyer).orElse(null);
+            if (foyer != null) {
+                university.setFoyer(foyer);
+                return universityRepository.save(university);
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public University getUniversite(long capacite) {
+        return universityRepository.findUniversityByBlocCapaciteLessThan(capacite);
     }
 }

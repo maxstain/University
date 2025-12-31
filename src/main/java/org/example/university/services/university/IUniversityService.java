@@ -18,4 +18,8 @@ public interface IUniversityService {
     public List<University> getAllUniversities();
 
     public University addFoyerToUniversity(long idUniversity, long idFoyer);
+
+    public University affecterFoyerAUniversite (Long idFoyer, String nomUniversite) ;
+
+    University getUniversite (long capacite);
 }

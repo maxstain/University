@@ -43,4 +43,14 @@ public class BlocServiceImpl implements IBlocService {
     public List<Bloc> getAllBlocs() {
         return (List<Bloc>) blocRepository.findAll();
     }
+
+    @Override
+    public Bloc affecterBlocAFoyer(String nomBloc, org.example.university.entities.Foyer foyer) {
+        Bloc bloc = blocRepository.findByNomBloc(nomBloc);
+        if (bloc != null) {
+            bloc.setFoyer(foyer);
+            return blocRepository.save(bloc);
+        }
+        return null;
+    }
 }

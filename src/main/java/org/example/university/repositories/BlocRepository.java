@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BlocRepository extends CrudRepository<Bloc, Long> {
+    Bloc findByNomBloc(String nomBloc);
 }

@@ -43,4 +43,9 @@ public class EtudiantServiceImpl implements IEtudiantService {
     public List<Etudiant> getAllEtudiants() {
         return (List<Etudiant>) etRepo.findAll();
     }
+
+    @Override
+    public List<Etudiant> getEtudiants(java.util.Date start, java.util.Date end) {
+        return etRepo.findEtudiantsByReservationDateBetween(start, end);
+    }
 }

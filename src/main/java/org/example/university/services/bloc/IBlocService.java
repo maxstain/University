@@ -15,4 +15,6 @@ public interface IBlocService {
     public Bloc getBlocById(long idBloc);
 
     public List<Bloc> getAllBlocs();
+
+    public Bloc affecterBlocAFoyer(String nomBloc, org.example.university.entities.Foyer foyer) ;
 }
