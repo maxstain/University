@@ -15,4 +15,8 @@ public interface IChambreService {
     public Chambre getChambreById(long idChambre);
 
     public List<Chambre> getAllChambres();
+
+    void listeChambresParBloc();
+
+    void pourcentageChambreParTypeChambre();
 }
